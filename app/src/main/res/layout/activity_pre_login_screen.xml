@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PreLoginScreen"
+    android:background="@color/c_black">
+
+    <ImageView
+        android:id="@+id/btn_cancel_PLogin"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/PLogin_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chào mừng bạn đến với IDANCE"
+        android:textColor="@color/c_white"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cancel_PLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="22sp"/>
+
+    <ImageView
+        android:id="@+id/PLogin_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo"
+        app:layout_constraintTop_toBottomOf="@id/PLogin_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/PLogin_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yêu cầu đăng nhập"
+        android:textColor="@color/c_white"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/PLogin_2" />
+    
+    <TextView
+        android:id="@+id/PLogin_4"
+        android:layout_width="296dp"
+        android:layout_height="wrap_content"
+        android:text="Bạn cần đăng nhập trước khi sử dụng tính năng này để đảm bảo việc đồng bộ dữ liệu của tài khoản trên nhiều thiết bị"
+        android:textColor="@color/c_white"
+        android:textAlignment="center"
+        android:fontFamily="@font/roboto_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PLogin_3"
+        android:layout_marginTop="40dp"
+        android:textSize="14sp"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PLogin_4">
+        <Button
+            android:id="@+id/btn_agree_PLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đồng ý"
+            android:textColor="@color/c_white"
+            android:fontFamily="@font/roboto_regular"
+            android:background="@drawable/button_round"
+
+            android:layout_margin="40dp"/>
+        <TextView
+            android:id="@+id/btn_disagree_PLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HỦY BỎ"
+            android:textColor="@color/c_white"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_regular"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

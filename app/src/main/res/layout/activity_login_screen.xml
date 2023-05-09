@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginScreen"
+    android:background="@color/c_black">
+
+    <ImageView
+        android:id="@+id/btn_cancel_login"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/login_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "ĐĂNG NHẬP"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/c_white"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cancel_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_2"/>
+
+    <ImageView
+        android:id="@+id/login_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo"
+        app:layout_constraintTop_toBottomOf="@id/login_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layout_input_login"
+        android:layout_marginTop="40dp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_input_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_bottom_field"
+        app:layout_constraintTop_toBottomOf="@id/login_2"
+        android:layout_marginTop="50dp">
+        <EditText
+            android:id="@+id/edt_username_login"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_round"
+            android:hint="Tên đăng nhập"
+            android:paddingStart="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/edt_password_login"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_round"
+            android:hint="Mật khẩu"
+            android:paddingStart="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            android:drawableRight="@drawable/eye"
+            android:paddingEnd="20dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Đăng nhập"
+            android:textColor="@color/c_white"
+            android:fontFamily="@font/roboto_regular"
+            android:background="@drawable/button_round"
+            android:backgroundTint="@color/c_red"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp" />
+
+   </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_bottom_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_input_login"
+        >
+        <TextView
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Đăng ký ngay"
+            android:textColor="@color/c_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="26dp"/>
+
+        <TextView
+            android:id="@+id/btn_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Quên mật khẩu?"
+            android:textColor="@color/c_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="26dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/login_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hoặc"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="20sp"
+        android:textColor="@color/c_white"
+        app:layout_constraintTop_toBottomOf="@id/layout_bottom_field"
+        android:gravity="center"/>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_other_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/login_3">
+        
+        <ImageView
+            android:id="@+id/btn_login_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="150dp"
+            android:background="@drawable/icon_facebook"/>
+
+        <ImageView
+            android:id="@+id/btn_login_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="150dp"
+            android:background="@drawable/icon_google"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
